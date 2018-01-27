@@ -24,6 +24,8 @@ Please don't use create-react-app or any other starter kits. We want to see how 
     * The questionnaire component should be able to display multiple sections, and each section should be able to display multiple questions.
     * The section indicator should match which section the user is at currently.
     * The Next button should only be enabled when all the questions in a section are answered.
+    * The user can select only one option in a question.
+    * The question component should be able to display at least 2 and at most 5 options.
     * Make sure to add a "PREV" button to let the user go back and edit their answers.
     * It is up to you how you want to store the data.
     * At the last section, instead of the "NEXT" button, create a "SUBMIT" button that console.logs the answers of the user.
