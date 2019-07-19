@@ -1,20 +1,25 @@
 # MyBrainSolutions Frontend Coding Challenge (React/Redux)
 
-The goal of this coding challenge is to create a very simple questionnaire form. We are looking for good, organized, and modular code.
+The goal of this coding challenge is to create a very simple questionnaire form.
+We are looking for good, organized, and modular code.
 
-There are already some suggested npm packages (check them out in package.json). You are more then welcome to use whatever packages you are more comfortable with. You can delete all the packages (and everything else in package.json) and put in new ones if you want to.
+There are already some suggested npm packages (check them out in package.json).
+You are more then welcome to use whatever packages you are more comfortable with.
+You can delete all the packages (and everything else in package.json) and put in new ones if you want to.
 
-You will have **two days** to submit your project. You don't need to 100% finish the project, do the best you can.
+You don't need to 100% finish the project, do the best you can.
 
 ## TECH
 Please use the following tech:
 
 * React
 * Webpack
-* Redux (optional)
+* Redux
 
-Before starting to code, you will need to setup your own Webpack. Feel free to copy & modify a Webpack config you have used before.
-Please don't use create-react-app or any other starter kits. We want to see how you start and organize the project, as much as we want to see great code.
+Before starting to code, you will need to setup your own Webpack.
+Feel free to copy & modify a Webpack config you have used before.
+Please don't use create-react-app or any other starter kits.
+We want to see how you start and organize the project, as much as we want to see great code.
 
 ## INSTRUCTIONS
 * Fork this repo in Bitbucket
@@ -32,7 +37,7 @@ Please don't use create-react-app or any other starter kits. We want to see how 
     * At the last section, instead of the "NEXT" button, create a "SUBMIT" button that console.logs the answers of the user.
 
 ## BONUS POINTS
-These are optional, you don't have to do them. It'll help you earn bonus brownie points with us.
+These are optional, you don't have to do them.
 
 * Finish the project
 * Animations (CSS or otherwise)
