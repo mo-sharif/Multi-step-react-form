@@ -25,7 +25,7 @@ module.exports = merge(common, {
     plugins: [                           
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            title: 'totalBrain',
+            title: 'Total Brain',
             inject: false,
             template: require('html-webpack-template'),
             bodyHtmlSnippet :'<main class="main" id="app"></main>'
