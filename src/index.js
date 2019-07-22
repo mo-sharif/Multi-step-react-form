@@ -1,12 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./app/app.jsx"
+import App from "./app.jsx";
+import SimpleForm from "./components/simpleForm/simpleForm";
 import { Provider } from "react-redux";
 import configureStore from "./store";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(
+const routing = (
 	<Provider store={configureStore()}>
-		<App />
-	</Provider>,
-	document.getElementById("app")
+		<Router>
+			<div className="wrapper">
+				<Switch>
+					<Route exact path="/" component={App} />
+					<Route exact path="/assess" component={SimpleForm} />
+				</Switch>
+			</div>
+		</Router>
+	</Provider>
 );
+ReactDOM.render(routing, document.getElementById("root"));

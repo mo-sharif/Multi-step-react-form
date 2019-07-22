@@ -8,7 +8,8 @@ module.exports = merge(common, {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        historyApiFallback: true,
     },  
     module: {
         rules: [{
@@ -28,7 +29,7 @@ module.exports = merge(common, {
             title: 'Total Brain',
             inject: false,
             template: require('html-webpack-template'),
-            bodyHtmlSnippet :'<main class="main" id="app"></main>'
+            bodyHtmlSnippet :'<main class="main" id="root"></main>'
         })   
     ]
 });

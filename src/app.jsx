@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { welcomeAction } from "../actions/welcomeAction";
+import { welcomeAction } from "./actions/welcomeAction";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 /*
  * mapDispatchToProps
@@ -20,14 +21,12 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div className="App">
-				<header className="header">App Header</header>
-				<section className="body">
-					<h1 className="title">Welcome to Total Brain</h1>
-					<pre>{JSON.stringify(this.props)}</pre>
-					<button onClick={this.welcomeAction}>Welcome</button>
-				</section>
-				<footer className="header">App Footer</footer>
+			<div className="flex-container">
+				<div className="row">
+					<div className="flex-item">
+						<Link to="assess" className="cardButton">START YOUR CHECK-UP</Link>
+					</div>
+				</div>
 			</div>
 		);
 	}
