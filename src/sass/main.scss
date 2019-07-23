@@ -1,4 +1,5 @@
-$break-small: 320px;
+$break-small: 420px;
+$break-medium: 720px;
 $break-large: 1200px;
 
 html,
@@ -32,7 +33,10 @@ body,
 		width: 22px;
 		height: 22px;
 		color: #4a4a4a;
-	}
+    }
+    @media screen and (max-width: $break-medium) {
+        height: 400px;
+      }
 }
 .title {
 	width: 680px;
@@ -45,7 +49,10 @@ body,
 	line-height: normal;
 	letter-spacing: -0.39px;
 	text-align: left;
-	color: #4a4a4a;
+    color: #4a4a4a;
+    @media screen and (max-width: $break-medium) {
+        width: 400px;
+      }
 }
 .paragraph {
 	width: 680px;
@@ -58,7 +65,10 @@ body,
 	line-height: normal;
 	letter-spacing: -0.39px;
 	text-align: left;
-	color: #9b9b9b;
+    color: #9b9b9b;
+    @media screen and (max-width: $break-medium) {
+        width: 400px;
+      }
 }
 
 .flex-container {
@@ -75,7 +85,10 @@ body,
 	flex-direction: column;
 }
 .row {
-	width: auto;
+    width: auto;
+    @media screen and (max-width: $break-medium) {
+        width: 400px;
+      }
 }
 .flex-item {
 	line-height: 20px;
@@ -96,13 +109,26 @@ body,
 		letter-spacing: -0.39px;
 		color: #4a4a4a;
 		text-decoration: none;
-		padding: 40px;
+        padding: 40px;
+        @media screen and (max-width: $break-medium) {
+            font-size:22px;
+            padding: 20px;
+          }
 	}
 }
 
 .radio-toolbar {
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    @media screen and (max-width: $break-medium) {
+        display: inline-block;
+      }
+      .radio-input{
+        @media screen and (max-width: $break-medium) {
+            display: inline-block;
+            width: 50%;
+          }
+      }
 }
 
 .radio-toolbar input[type="radio"] {
