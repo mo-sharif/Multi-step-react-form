@@ -3,30 +3,23 @@ import { Field, reduxForm } from "redux-form";
 import renderField from "../renderField/renderField";
 
 const FormFirstPage = props => {
-	const { handleSubmit } = props;
+	const { handleSubmit, questions, handleRadioClick, isChecked } = props;
 	return (
 		<form onSubmit={handleSubmit}>
-			<Field
-				name="question1"
-				type="radio"
-				component={renderField}
-				label="Question 1"
-			/>
-			<Field
-				name="question2"
-				type="radio"
-				component={renderField}
-				label="Question 2"
-			/>
-			<Field
-				name="question3"
-				type="radio"
-				component={renderField}
-				label="Question 3"
-			/>
+			{questions.map((question, index) => (
+				<Field
+                    onClick={handleRadioClick}
+                    checked={isChecked}
+                    key={index}
+					name={question.name}
+					type="radio"
+					component={renderField}
+                    label={question.label}
+				/>
+			))}
 			<div>
-				<button type="submit" className="next">
-					Next
+				<button type="submit" className="next-button hover-shadow-effect">
+					Next &#8594;
 				</button>
 			</div>
 		</form>

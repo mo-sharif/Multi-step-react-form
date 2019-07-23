@@ -3,32 +3,31 @@ import { Field, reduxForm } from "redux-form";
 import renderField from "../renderField/renderField";
 
 const FormThirdPage = props => {
-	const { handleSubmit, pristine, previousPage, submitting } = props;
+	const { handleSubmit, previousPage, submitting, questions } = props;
 	return (
 		<form onSubmit={handleSubmit}>
-			<Field
-				name="question7"
-				type="radio"
-				component={renderField}
-				label="Question 7"
-			/>
-			<Field
-				name="question8"
-				type="radio"
-				component={renderField}
-				label="Question 8"
-			/>
-			<Field
-				name="question9"
-				type="radio"
-				component={renderField}
-				label="Question 9"
-			/>
+			{questions.map((question, index) => (
+				<Field
+					key={index}
+					name={question.name}
+					type="radio"
+					component={renderField}
+					label={question.label}
+				/>
+			))}
 			<div>
-				<button type="button" className="previous" onClick={previousPage}>
-					Previous
+				<button
+					type="button"
+					className="previous-button hover-shadow-effect"
+					onClick={previousPage}
+				>
+					&#8592; Previous
 				</button>
-				<button type="submit" disabled={pristine || submitting}>
+				<button
+					type="submit"
+					className="next-button hover-shadow-effect"
+					disabled={submitting}
+				>
 					Submit
 				</button>
 			</div>

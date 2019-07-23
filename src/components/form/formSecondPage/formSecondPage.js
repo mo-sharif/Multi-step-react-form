@@ -6,33 +6,28 @@ const renderError = ({ meta: { touched, error } }) =>
 	touched && error ? <span>{error}</span> : false;
 
 const FormSecondPage = props => {
-	const { handleSubmit, previousPage } = props;
+	const { handleSubmit, previousPage, questions } = props;
 	return (
 		<form onSubmit={handleSubmit}>
-			<Field
-				name="question4"
-				type="radio"
-				component={renderField}
-				label="Question 4"
-			/>
-			<Field
-				name="question5"
-				type="radio"
-				component={renderField}
-				label="Question 5"
-			/>
-			<Field
-				name="question6"
-				type="radio"
-				component={renderField}
-				label="Question 6"
-			/>
+			{questions.map((question, index) => (
+				<Field
+					key={index}
+					name={question.name}
+					type="radio"
+					component={renderField}
+					label={question.label}
+				/>
+			))}
 			<div>
-				<button type="button" className="previous" onClick={previousPage}>
-					Previous
+				<button
+					type="button"
+					className="previous-button hover-shadow-effect"
+					onClick={previousPage}
+				>
+					&#8592; Previous
 				</button>
-				<button type="submit" className="next">
-					Next
+				<button type="submit" className="next-button hover-shadow-effect">
+					Next &#8594;
 				</button>
 			</div>
 		</form>

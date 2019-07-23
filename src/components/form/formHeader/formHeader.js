@@ -5,7 +5,9 @@ class FormHeader extends React.Component {
 	render() {
 		return (
 			<div className={"header"}>
-				<div className={"logo"}>TotalBrain</div>
+				<Link to="/">
+        <div className={"logo"}>TotalBrain</div>
+				</Link>
 				<Link to="/">
 					<div className={"close"}>&#10005;</div>
 				</Link>

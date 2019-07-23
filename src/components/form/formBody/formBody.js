@@ -20,7 +20,12 @@ class FormBody extends React.Component {
 
 	previousPage() {
 		this.setState({ page: this.state.page - 1 });
-	}
+  }
+  radioClick() {
+          this.setState((prevState) => {
+              return {isChecked: !prevState.isChecked};
+          });
+  }
 	render() {
 		const { onSubmit } = this.props;
 		const { page } = this.state;
@@ -33,15 +38,24 @@ class FormBody extends React.Component {
 					week or so.
 				</p>
 				<div>
-					{page === 1 && <FormFirstPage onSubmit={this.nextPage} />}
+					{page === 1 && (
+						<FormFirstPage
+							questions={this.props.questions.firstPage}
+              onSubmit={this.nextPage}
+              onClick={this.radioClick}
+              isChecked={this.state.isChecked}
+						/>
+					)}
 					{page === 2 && (
 						<FormSecondPage
+							questions={this.props.questions.secondPage}
 							previousPage={this.previousPage}
 							onSubmit={this.nextPage}
 						/>
 					)}
 					{page === 3 && (
 						<FormThirdPage
+							questions={this.props.questions.thirdPage}
 							previousPage={this.previousPage}
 							onSubmit={onSubmit}
 						/>

@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import welcomeReducer from "./welcomeReducer";
+import questionsReducer from "./questionsReducer";
 import { reducer as formReducer } from 'redux-form'
 
 
 export default combineReducers({
-	welcomeReducer,
+	questionsReducer,
 	form: formReducer
 });
