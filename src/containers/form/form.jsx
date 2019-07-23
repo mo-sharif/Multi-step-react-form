@@ -19,6 +19,9 @@ let mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({ ...state });
 
 class Form extends Component {
+	result(values) {
+		console.log("result is", values);
+	};
 	welcomeAction() {
 		this.props.welcomeAction();
 	}
@@ -29,7 +32,7 @@ class Form extends Component {
 					<FormHeader />
 				</div>
 				<div className="row">
-					<FormBody />
+					<FormBody onSubmit={this.result} />
 				</div>
 			</div>
 		);

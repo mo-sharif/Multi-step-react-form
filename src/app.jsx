@@ -7,7 +7,7 @@ class App extends Component {
 			<div className="flex-container">
 				<div className="row">
 					<div className="flex-item">
-						<Link to="assess" className="cardButton">
+						<Link to="assess" className="cardButton hover-shadow-effect">
 							START YOUR CHECK-UP
 						</Link>
 					</div>
