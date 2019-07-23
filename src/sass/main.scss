@@ -33,10 +33,10 @@ body,
 		width: 22px;
 		height: 22px;
 		color: #4a4a4a;
-    }
-    @media screen and (max-width: $break-medium) {
-        height: 400px;
-      }
+	}
+	@media screen and (max-width: $break-medium) {
+		height: 400px;
+	}
 }
 .title {
 	width: 680px;
@@ -49,10 +49,10 @@ body,
 	line-height: normal;
 	letter-spacing: -0.39px;
 	text-align: left;
-    color: #4a4a4a;
-    @media screen and (max-width: $break-medium) {
-        width: 400px;
-      }
+	color: #4a4a4a;
+	@media screen and (max-width: $break-medium) {
+		width: 400px;
+	}
 }
 .paragraph {
 	width: 680px;
@@ -65,10 +65,10 @@ body,
 	line-height: normal;
 	letter-spacing: -0.39px;
 	text-align: left;
-    color: #9b9b9b;
-    @media screen and (max-width: $break-medium) {
-        width: 400px;
-      }
+	color: #9b9b9b;
+	@media screen and (max-width: $break-medium) {
+		width: 400px;
+	}
 }
 
 .flex-container {
@@ -85,10 +85,10 @@ body,
 	flex-direction: column;
 }
 .row {
-    width: auto;
-    @media screen and (max-width: $break-medium) {
-        width: 400px;
-      }
+	width: auto;
+	@media screen and (max-width: $break-medium) {
+		width: 400px;
+	}
 }
 .flex-item {
 	line-height: 20px;
@@ -109,26 +109,26 @@ body,
 		letter-spacing: -0.39px;
 		color: #4a4a4a;
 		text-decoration: none;
-        padding: 40px;
-        @media screen and (max-width: $break-medium) {
-            font-size:22px;
-            padding: 20px;
-          }
+		padding: 40px;
+		@media screen and (max-width: $break-medium) {
+			font-size: 22px;
+			padding: 20px;
+		}
 	}
 }
 
 .radio-toolbar {
 	display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: $break-medium) {
-        display: inline-block;
-      }
-      .radio-input{
-        @media screen and (max-width: $break-medium) {
-            display: inline-block;
-            width: 50%;
-          }
-      }
+	justify-content: space-between;
+	@media screen and (max-width: $break-medium) {
+		display: inline-block;
+	}
+	.radio-input {
+		@media screen and (max-width: $break-medium) {
+			display: inline-block;
+			width: 50%;
+		}
+	}
 }
 
 .radio-toolbar input[type="radio"] {
@@ -217,4 +217,58 @@ button {
 }
 .previous-button {
 	float: left;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	.progress-bar {
+		counter-reset: step;
+		li {
+			list-style-type: none;
+			width: 25%;
+			float: left;
+			font-size: 12px;
+			position: relative;
+			text-align: center;
+			text-transform: uppercase;
+			color: #7d7d7d;
+			&:before {
+				width: 30px;
+				height: 30px;
+				content: counter(step);
+				counter-increment: step;
+				line-height: 30px;
+				border: 2px solid #7d7d7d;
+				display: block;
+				text-align: center;
+				margin: 0 auto 10px auto;
+				border-radius: 50%;
+				background-color: white;
+			}
+			&:after {
+				width: 100%;
+				height: 2px;
+				content: "";
+				position: absolute;
+				background-color: #7d7d7d;
+				top: 15px;
+				left: -50%;
+				z-index: -1;
+			}
+			&:first-child:after {
+				content: none;
+			}
+			&.active {
+				color: #4a90e2;
+				&:before {
+					border-color: #4a90e2;
+				}
+				+ li:after {
+					background-color: #4a90e2;
+				}
+			}
+		}
+	}
 }

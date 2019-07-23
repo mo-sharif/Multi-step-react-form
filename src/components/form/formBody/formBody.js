@@ -2,6 +2,7 @@ import React from "react";
 import FormFirstPage from "../formFirstPage/formFirstPage";
 import FormSecondPage from "../formSecondPage/formSecondPage";
 import FormThirdPage from "../formThirdPage/formThirdPage";
+import ProgressBar from "../progressBar/progressBar";
 
 import PropTypes from "prop-types";
 
@@ -37,6 +38,7 @@ class FormBody extends React.Component {
 					others. There are no right or wrong answers. Please focus on the past
 					week or so.
 				</p>
+          <ProgressBar progress={page}/>
 				<div>
 					{page === 1 && (
 						<FormFirstPage
