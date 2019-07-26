@@ -6,7 +6,7 @@ class FormHeader extends React.Component {
 		return (
 			<div className={"header"}>
 				<Link to="/">
-        <div className={"logo"}>TotalBrain</div>
+        <div className={"logo"}>Brain</div>
 				</Link>
 				<Link to="/">
 					<div className={"close"}>&#10005;</div>
